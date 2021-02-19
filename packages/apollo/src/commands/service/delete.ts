@@ -1,5 +1,6 @@
 import cli from "cli-ux";
 import { flags } from "@oclif/command";
+import chalk from "chalk";
 
 import { ProjectCommand } from "../../Command";
 import { graphUndefinedError } from "../../utils/sharedMessages";
