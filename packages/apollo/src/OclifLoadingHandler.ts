@@ -1,3 +1,5 @@
+// TODO this is why we can't remove the LoadingHandler from cli-core
+
 import { Command } from "@oclif/command";
 import { LoadingHandler } from "apollo-cli-core";
 export class OclifLoadingHandler implements LoadingHandler {

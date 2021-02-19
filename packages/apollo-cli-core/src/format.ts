@@ -1,3 +1,4 @@
+// TODO: remove from packages/apollo-cli-core/src/project/client.ts
 import moment from "moment";
 
 export function formatMS(

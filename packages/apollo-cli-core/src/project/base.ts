@@ -1,6 +1,7 @@
 import { extname } from "path";
 import { lstatSync, readFileSync } from "fs";
 import URI from "vscode-uri";
+import { LoadingHandler } from "../loadingHandler";
 
 import {
   TypeSystemDefinitionNode,
@@ -21,7 +22,7 @@ import {
 
 import { GraphQLDocument, extractGraphQLDocuments } from "../document";
 
-import { LoadingHandler } from "../loadingHandler";
+// import { LoadingHandler } from "../loadingHandler";
 import { FileSet } from "../fileSet";
 import { ApolloConfig, keyEnvVar } from "../config";
 import {
