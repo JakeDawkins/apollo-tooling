@@ -1,7 +1,7 @@
 import {
   CheckSchema_service_checkSchema,
   ChangeSeverity
-} from "apollo-language-server/lib/graphqlTypes";
+} from "apollo-cli-core/lib/graphqlTypes";
 
 const checkSchemaResult: CheckSchema_service_checkSchema = {
   __typename: "CheckSchemaResult",

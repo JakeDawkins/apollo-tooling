@@ -1,5 +1,5 @@
 import { duration } from "moment";
-import { graphqlTypes } from "apollo-language-server";
+import { graphqlTypes } from "apollo-cli-core";
 
 export function validateHistoricParams({
   validationPeriod,

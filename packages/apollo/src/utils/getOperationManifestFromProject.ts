@@ -1,4 +1,4 @@
-import { GraphQLClientProject } from "apollo-language-server";
+import { GraphQLClientProject } from "apollo-cli-core";
 import { operationHash, operationRegistrySignature } from "apollo-graphql";
 
 export interface ManifestEntry {

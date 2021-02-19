@@ -13,7 +13,7 @@ import {
   isClientConfig,
   isServiceConfig,
   loadConfig
-} from "apollo-language-server";
+} from "apollo-cli-core";
 import { DeepPartial, WithRequired } from "apollo-env";
 import { OclifLoadingHandler } from "./OclifLoadingHandler";
 import URI from "vscode-uri";

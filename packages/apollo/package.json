@@ -47,7 +47,7 @@
     "apollo-codegen-typescript": "file:../apollo-codegen-typescript",
     "apollo-env": "file:../apollo-env",
     "apollo-graphql": "file:../apollo-graphql",
-    "apollo-language-server": "file:../apollo-language-server",
+    "apollo-cli-core": "file:../apollo-cli-core",
     "chalk": "2.4.2",
     "cli-ux": "5.5.1",
     "env-ci": "5.0.2",

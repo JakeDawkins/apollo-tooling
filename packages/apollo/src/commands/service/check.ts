@@ -17,8 +17,8 @@ import {
   CheckSchema_service_checkSchema_diffToPrevious_changes as Change,
   CheckSchemaVariables,
   IntrospectionSchemaInput
-} from "apollo-language-server/lib/graphqlTypes";
-import { ApolloConfig } from "apollo-language-server";
+} from "apollo-cli-core/lib/graphqlTypes";
+import { ApolloConfig } from "apollo-cli-core";
 import moment from "moment";
 import sortBy from "lodash.sortby";
 import { isNotNullOrUndefined } from "apollo-env";

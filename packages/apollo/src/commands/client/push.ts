@@ -13,7 +13,7 @@ import {
   GraphQLClientProject,
   ApolloConfig,
   graphqlTypes
-} from "apollo-language-server";
+} from "apollo-cli-core";
 import { graphUndefinedError } from "../../utils/sharedMessages";
 
 export default class ClientPush extends ClientCommand {

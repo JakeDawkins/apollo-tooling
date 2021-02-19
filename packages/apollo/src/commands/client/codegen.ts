@@ -6,7 +6,7 @@ import tty from "tty";
 import { Gaze } from "gaze";
 import URI from "vscode-uri";
 import chalk from "chalk";
-import { Debug } from "apollo-language-server";
+import { Debug } from "apollo-cli-core";
 
 import { TargetType, default as generate } from "../../generate";
 import { ClientCommand } from "../../Command";
