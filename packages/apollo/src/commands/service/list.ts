@@ -84,7 +84,8 @@ function formatHumanReadable({
 }
 
 export default class ServiceList extends ProjectCommand {
-  static description = "List the services in a graph";
+  static description =
+    "DEPRECATED in favor of the new Rover CLI. See https://go.apollo.dev/r/docs. List the services in a graph";
   static flags = {
     ...ProjectCommand.flags,
     tag: flags.string({
@@ -107,6 +108,12 @@ export default class ServiceList extends ProjectCommand {
   };
 
   async run() {
+    this.warn(
+      chalk.yellow(
+        "[Deprecation Warning] This command is deprecated. Please migrate to Rover for future feature updates.\n" +
+          "See here for more info on Rover and to get started: https://go.apollo.dev/r/docs"
+      )
+    );
     // @ts-ignore we're going to populate `taskOutput` later
     const taskOutput: TasksOutput = {};
 

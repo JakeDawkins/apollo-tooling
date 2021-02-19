@@ -8,7 +8,8 @@ import { dirname as getDirName } from "path";
 
 export default class ServiceDownload extends ProjectCommand {
   static aliases = ["schema:download"];
-  static description = "Download the schema from your GraphQL endpoint.";
+  static description =
+    "DEPRECATED in favor of the new Rover CLI. See https://go.apollo.dev/r/docs. Download the schema from your GraphQL endpoint.";
 
   static flags = {
     ...ProjectCommand.flags,
@@ -46,6 +47,13 @@ export default class ServiceDownload extends ProjectCommand {
   ];
 
   async run() {
+    this.warn(
+      chalk.yellow(
+        "[Deprecation Warning] This command is deprecated. Please migrate to Rover for future feature updates.\n" +
+          "See here for more info on Rover and to get started: https://go.apollo.dev/r/docs"
+      )
+    );
+
     await this.runTasks(({ args, project, flags, config }) => [
       {
         title: `Saving schema to ${args.output}`,

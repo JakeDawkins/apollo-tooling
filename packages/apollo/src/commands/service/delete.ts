@@ -6,7 +6,7 @@ import { graphUndefinedError } from "../../utils/sharedMessages";
 
 export default class ServiceDelete extends ProjectCommand {
   static description =
-    "Delete a federated service from Apollo and recompose remaining services";
+    "DEPRECATED in favor of the new Rover CLI. See https://go.apollo.dev/r/docs. Delete a federated service from Apollo and recompose remaining services";
   static flags = {
     ...ProjectCommand.flags,
     tag: flags.string({
@@ -46,6 +46,13 @@ export default class ServiceDelete extends ProjectCommand {
   };
 
   async run() {
+    this.warn(
+      chalk.yellow(
+        "[Deprecation Warning] This command is deprecated. Please migrate to Rover for future feature updates.\n" +
+          "See here for more info on Rover and to get started: https://go.apollo.dev/r/docs"
+      )
+    );
+
     let result;
     const { flags } = this.parse(ServiceDelete);
 

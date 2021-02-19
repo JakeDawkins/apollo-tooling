@@ -230,7 +230,7 @@ export function formatHumanReadable({
 export default class ServiceCheck extends ProjectCommand {
   static aliases = ["schema:check"];
   static description =
-    "Check a service against known operation workloads to find breaking changes";
+    "DEPRECATED in favor of the new Rover CLI. See https://go.apollo.dev/r/docs. Check a service against known operation workloads to find breaking changes";
   static flags = {
     ...ProjectCommand.flags,
     tag: flags.string({
@@ -295,6 +295,13 @@ export default class ServiceCheck extends ProjectCommand {
   };
 
   async run() {
+    this.warn(
+      chalk.yellow(
+        "[Deprecation Warning] This command is deprecated. Please migrate to Rover for future feature updates.\n" +
+          "See here for more info on Rover and to get started: https://go.apollo.dev/r/docs"
+      )
+    );
+
     // @ts-ignore we're going to populate `taskOutput` later
     const taskOutput: TasksOutput = {};
 

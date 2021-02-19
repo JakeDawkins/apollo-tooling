@@ -10,7 +10,8 @@ import { graphUndefinedError } from "../../utils/sharedMessages";
 
 export default class ServicePush extends ProjectCommand {
   static aliases = ["schema:publish"];
-  static description = "Push a service definition to Apollo";
+  static description =
+    "DEPRECATED in favor of the new Rover CLI. See https://go.apollo.dev/r/docs. Push a service definition to Apollo";
   static flags = {
     ...ProjectCommand.flags,
     tag: flags.string({
@@ -65,6 +66,13 @@ export default class ServicePush extends ProjectCommand {
   };
 
   async run() {
+    this.warn(
+      chalk.yellow(
+        "[Deprecation Warning] This command is deprecated. Please migrate to Rover for future feature updates.\n" +
+          "See here for more info on Rover and to get started: https://go.apollo.dev/r/docs"
+      )
+    );
+
     let result;
     let isFederated;
     let gitContext;
